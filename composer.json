@@ -4,8 +4,16 @@
     "license" : "proprietary",
     "require" : {
         "silex/silex" : "~1.2",
-        "php" : ">=5.4.0"
+        "php" : ">=5.4.0",
+        "jtl/shop4-backend" : "dev-develop"
     },
+    "repositories" : [
+        {
+            "type": "git",
+            "url": "git@gitlab.com:jtl-software-gmbh/shop4-backend.git",
+            "reference": "origin/master"
+        }
+    ],
     "config" : {
         "bin-dir" : "app"
     },

@@ -16,5 +16,16 @@ class Application extends SilexApplication
 
         // Enable Silex debugging for the purpose of development
         $this['debug'] = true;
+
+        // Load Silex ServiceControllerServiceProvider to support the colon-separated controller notation
+        $this->register(new \Silex\Provider\ServiceControllerServiceProvider());
+
+        // Register Shop4 backend
+        $this->registerBackendServices();
+    }
+
+    private function registerBackendServices()
+    {
+        $this->mount('/admin', new \Jtl\Shop4\Backend\Provider\ControllerProvider());
     }
 }
