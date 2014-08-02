@@ -1,0 +1,24 @@
+{
+    "name" : "jtl/shop4",
+    "type" : "app",
+    "license" : "proprietary",
+    "require" : {
+        "silex/silex" : "~1.2",
+        "php" : ">=5.4.0"
+    },
+    "config" : {
+        "bin-dir" : "app"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Jtl\\Shop4\\" : "src/"
+        }
+    },
+    "authors" : [
+        {
+            "name" : "Christian Spoo",
+            "email" : "christian.spoo@jtl-software.com",
+            "role" : "Developer"
+        }
+    ]
+}
