@@ -13,13 +13,6 @@
         "symfony/css-selector": "~2.5"
     },
     "minimum-stability" : "alpha",
-    "repositories" : [
-        {
-            "type": "git",
-            "url": "git@gitlab.com:jtl-software-gmbh/shop4-backend.git",
-            "reference": "origin/master"
-        }
-    ],
     "config" : {
         "bin-dir" : "bin"
     },
