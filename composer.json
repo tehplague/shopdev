@@ -4,9 +4,15 @@
     "license" : "proprietary",
     "require" : {
         "silex/silex" : "~1.2",
-        "php" : ">=5.4.0",
-        "jtl/shop4-backend" : "dev-develop"
+        "predis/service-provider" : "~0.4",
+        "php" : ">=5.4.0"
     },
+    "require-dev" : {
+        "phpunit/phpunit" : "~4.1",
+        "symfony/browser-kit": "~2.5",
+        "symfony/css-selector": "~2.5"
+    },
+    "minimum-stability" : "alpha",
     "repositories" : [
         {
             "type": "git",
@@ -15,11 +21,16 @@
         }
     ],
     "config" : {
-        "bin-dir" : "app"
+        "bin-dir" : "bin"
     },
     "autoload" : {
         "psr-4" : {
             "Jtl\\Shop4\\" : "src/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Jtl\\Shop4\\Tests\\" : "tests/"
         }
     },
     "authors" : [

@@ -1,0 +1,21 @@
+database:
+    driver:     pdo_mysql
+    host:       localhost
+    user:       root
+    password:
+    database:   shop4
+    charset:    utf8
+
+# Redis configuration
+# 
+# By default, Redis is disabled
+redis:  ~
+
+# Uncomment one of the following blocks to enable Shop4 Redis support. Modify
+# the parameters according to your needs. Do not forget to comment the block
+# above.
+# redis:
+#     socket:     ~/redis/sock
+# redis:
+#     host:       127.0.0.1
+#     port:       6379
