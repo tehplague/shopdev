@@ -5,6 +5,11 @@ namespace Jtl\Shop4\Config;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 
+use Symfony\Component\Yaml\Yaml;
+use Symfony\Component\Config\Definition\Processor;
+
+use Jtl\Shop4\Config\Definition\SystemConfiguration;
+
 class ServiceProvider implements ServiceProviderInterface
 {
     /**
@@ -14,11 +19,25 @@ class ServiceProvider implements ServiceProviderInterface
      */
     public function register(Application $app)
     {
-
+        $this->loadConfiguration($app);
     }
 
     public function boot(Application $app)
     {
 
+    }
+
+    private function loadConfiguration(Application $app)
+    {
+        $yaml = file_get_contents(APP_ROOT . '/config/config.yml');
+        $parsedYaml = Yaml::parse($yaml);
+
+        $processor = new Processor();
+        $definition = new SystemConfiguration();
+
+        $app['shop4.config'] = $processor->processConfiguration(
+            $definition,
+            array($parsedYaml)
+        );
     }
 }

@@ -6,6 +6,7 @@ env:
 script: bin/phpunit --coverage-text
 
 before_script:
+    - cp config/config.dist.yml config/config.yml
     - composer install --dev --prefer-source
 
 php:

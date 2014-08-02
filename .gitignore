@@ -4,8 +4,8 @@
 *.[tT][mM][pP]
 .Trash-1000
 /cache
+/config/config.yml
 /vendor
-/app/config.php
 /app/doctrine
 /app/doctrine.php
 /app/uuid

@@ -2,9 +2,9 @@
 
 namespace Jtl\Shop4\Tests\Application;
 
-use Jtl\Shop4\Tests\Common\TestCase;
+use Jtl\Shop4\Tests\Common\ApplicationTestCase;
 
-class ContainerTest extends TestCase
+class ContainerTest extends ApplicationTestCase
 {
     public function testInstantiation()
     {
