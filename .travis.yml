@@ -9,7 +9,7 @@ before_script:
     - cp config/config.dist.yml config/config.yml
     - mysql -e 'create database shop4;'
     - composer install --dev --prefer-source
-    - bin/doctrine orm:schema-tool:create --force
+    - bin/doctrine orm:schema-tool:create
 
 php:
     - 5.4
