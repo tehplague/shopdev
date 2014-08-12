@@ -17,7 +17,14 @@ class ServiceProvider implements ServiceProviderInterface
 
         // Load DB config from configuration service and initialize Doctrine
         $app->register(new DoctrineServiceProvider(), array(
-            'db.options' => $app['shop4.config']['database']
+            'db.options' => array(
+                'driver' => $app['shop4.config']['database']['driver'],
+                'host' => $app['shop4.config']['database']['host'],
+                'user' => $app['shop4.config']['database']['user'],
+                'dbname' => $app['shop4.config']['database']['database'],
+                'password' => $app['shop4.config']['database']['password'],
+                'charset' => $app['shop4.config']['database']['charset']
+            )
         ));
 
         $app->register(new DoctrineOrmServiceProvider(), array(
