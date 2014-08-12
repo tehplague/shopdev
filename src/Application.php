@@ -17,8 +17,16 @@ class Application extends SilexApplication
         // Enable Silex debugging for the purpose of development
         $this['debug'] = true;
 
+        // Initialize Shop4 configuration services
+        $this->registerConfigServices();
+
         // Initialize database
         $this->registerDatabaseService();
+    }
+
+    private function registerConfigServices()
+    {
+        $this->register(new \Jtl\Shop4\Config\ServiceProvider());
     }
 
     private function registerDatabaseService()

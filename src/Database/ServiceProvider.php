@@ -15,15 +15,9 @@ class ServiceProvider implements ServiceProviderInterface
         $doctrineMappings = $this->generateDoctrineMappings($app);
         $doctrineTypes = $this->generateDoctrineTypes($app);
 
+        // Load DB config from configuration service and initialize Doctrine
         $app->register(new DoctrineServiceProvider(), array(
-            'db.options' => array(
-                'driver' => 'pdo_mysql',
-                'host' => 'localhost',
-                'user' => 'cspoo',
-                'dbname' => 'cspoo_shopdev',
-                'password' => 'KzbH3fnBtEMxh6TQ',
-                'charset' => 'utf8'
-            )
+            'db.options' => $app['shop4.config']['database']
         ));
 
         $app->register(new DoctrineOrmServiceProvider(), array(
