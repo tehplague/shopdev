@@ -3,6 +3,7 @@
 .*.swp
 *.[tT][mM][pP]
 .Trash-1000
+/bin
 /cache
 /config/config.yml
 /vendor

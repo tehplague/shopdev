@@ -25,6 +25,9 @@ class Application extends SilexApplication
 
         // Register Shop4 backend
         $this->registerBackendServices();
+
+        // Register installed plugins
+        $this->registerPlugins();
     }
 
     private function registerConfigServices()
@@ -34,6 +37,13 @@ class Application extends SilexApplication
 
     private function registerBackendServices()
     {
-        $this->mount('/admin', new \Jtl\Shop4\Backend\Provider\ControllerProvider());
+        $this->register(new \Jtl\Shop4\Backend\ServiceProvider());
+    }
+
+    private function registerPlugins()
+    {
+        $this['shop4.plugins'] = array();
+
+        // TODO: Determine which plugins are installed and register their plugin interfaces
     }
 }

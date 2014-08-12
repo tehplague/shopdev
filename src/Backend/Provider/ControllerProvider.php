@@ -15,16 +15,16 @@ class ControllerProvider implements ControllerProviderInterface
      */
     public function connect(Application $app)
     {
-        $controllers = $app['controllers_factory'];
+        $app['shop4.backend.controllers'] = $app['controllers_factory'];
 
         // Register backend controllers as services
         $this->registerControllers($app);
 
         // Register backend routes
-        $controllers->get('/login', 'shop4.backend.controller.auth.login:showLogin');
-        $controllers->post('/login', 'shop4.backend.controller.auth.login:processLogin');
+        $app['shop4.backend.controllers']->get('/login', 'shop4.backend.controllers.auth.login:showLogin');
+        $app['shop4.backend.controllers']->post('/login', 'shop4.backend.controllers.auth.login:processLogin');
 
-        return $controllers;
+        return $app['shop4.backend.controllers'];
     }
 
     /**
@@ -34,7 +34,7 @@ class ControllerProvider implements ControllerProviderInterface
      */
     private function registerControllers(Application $app)
     {
-        $app['shop4.backend.controller.auth.login'] = $app->share(function() use ($app) {
+        $app['shop4.backend.controllers.auth.login'] = $app->share(function() use ($app) {
             return new \Jtl\Shop4\Backend\Controller\Auth\LoginController();
         });
     }
