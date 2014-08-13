@@ -4,9 +4,9 @@ namespace Jtl\Shop4\Tests\Services;
 
 use Jtl\Shop4\Tests\Common\DatabaseTestCase;
 
-use Jtl\Shop4\Services\AuthService;
+use Jtl\Shop4\Services\BackendAuthService;
 
-class AuthServiceTest extends DatabaseTestCase
+class BackendAuthServiceTest extends DatabaseTestCase
 {
     protected function getFixtures()
     {
@@ -18,14 +18,14 @@ class AuthServiceTest extends DatabaseTestCase
     public function testPasswordHash()
     {
         $password = '12345';
-        $hash = AuthService::encryptUserPassword($password);
+        $hash = BackendAuthService::encryptUserPassword($password);
         $this->assertNotNull($hash);
         $this->assertStringStartsWith('$', $hash);
 
-        $verifyResult = AuthService::verifyUserPassword($password, $hash);
+        $verifyResult = BackendAuthService::verifyUserPassword($password, $hash);
         $this->assertTrue($verifyResult);
 
-        $failureResult = AuthService::verifyUserPassword('54321', $hash);
+        $failureResult = BackendAuthService::verifyUserPassword('54321', $hash);
         $this->assertFalse($failureResult);
     }
 
