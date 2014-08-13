@@ -5,10 +5,11 @@
     "require" : {
         "silex/silex" : "~1.2",
         "predis/service-provider" : "~0.4",
-        "ircmaxell/password-compat" : "1.0.*",
+        "ircmaxell/password-compat" : "~1.0",
         "php" : ">=5.4.0",
         "symfony/config" : "~2.5",
         "symfony/yaml" : "~2.5",
+        "doctrine/data-fixtures" : "~1.0",
         "dflydev/doctrine-orm-service-provider" : "1.0.*-dev"
     },
     "require-dev" : {

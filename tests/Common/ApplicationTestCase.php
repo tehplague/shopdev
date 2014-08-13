@@ -4,7 +4,7 @@ namespace Jtl\Shop4\Tests\Common;
 
 use Silex\WebTestCase;
 
-class ApplicationTestCase extends WebTestCase
+abstract class ApplicationTestCase extends WebTestCase
 {
     /**
      * Creates a Shop4 application object and enables debugging facilities

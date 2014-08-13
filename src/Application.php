@@ -22,6 +22,9 @@ class Application extends SilexApplication
 
         // Initialize database
         $this->registerDatabaseService();
+
+        // Initialize Shop4 backend services
+        $this->registerBackendServices();
     }
 
     private function registerConfigServices()
@@ -32,5 +35,10 @@ class Application extends SilexApplication
     private function registerDatabaseService()
     {
         $this->register(new \Jtl\Shop4\Database\ServiceProvider());
+    }
+
+    private function registerBackendServices()
+    {
+        $this['shop4.backend.auth'] = new \Jtl\Shop4\Services\AuthService($this['orm.em']);
     }
 }
