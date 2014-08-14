@@ -1,6 +1,6 @@
 <?php
 
-namespace Jtl\Shop4\Services;
+namespace Jtl\Shop4\Backend\Services;
 
 use Doctrine\ORM\EntityManager;
 

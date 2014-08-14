@@ -1,10 +1,10 @@
 <?php
 
-namespace Jtl\Shop4\Tests\Services;
+namespace Jtl\Shop4\Tests\Backend\Services;
 
 use Jtl\Shop4\Tests\Common\DatabaseTestCase;
 
-use Jtl\Shop4\Services\BackendAuthService;
+use Jtl\Shop4\Backend\Services\BackendAuthService;
 
 class BackendAuthServiceTest extends DatabaseTestCase
 {

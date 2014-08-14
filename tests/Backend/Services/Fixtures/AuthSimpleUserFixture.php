@@ -1,6 +1,6 @@
 <?php
 
-namespace Jtl\Shop4\Tests\Services\Fixtures;
+namespace Jtl\Shop4\Tests\Backend\Services\Fixtures;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\FixtureInterface;
