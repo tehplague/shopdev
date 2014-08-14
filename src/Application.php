@@ -20,14 +20,11 @@ class Application extends SilexApplication
         // Initialize Shop4 configuration services
         $this->registerConfigServices();
 
-        // Load Silex ServiceControllerServiceProvider to support the colon-separated controller notation
-        $this->register(new \Silex\Provider\ServiceControllerServiceProvider());
+        // Initialize database
+        $this->registerDatabaseService();
 
-        // Register Shop4 backend
+        // Initialize Shop4 backend services
         $this->registerBackendServices();
-
-        // Register installed plugins
-        $this->registerPlugins();
     }
 
     private function registerConfigServices()
@@ -35,15 +32,13 @@ class Application extends SilexApplication
         $this->register(new \Jtl\Shop4\Config\ServiceProvider());
     }
 
-    private function registerBackendServices()
+    private function registerDatabaseService()
     {
-        $this->register(new \Jtl\Shop4\Backend\ServiceProvider());
+        $this->register(new \Jtl\Shop4\Database\ServiceProvider());
     }
 
-    private function registerPlugins()
+    private function registerBackendServices()
     {
-        $this['shop4.plugins'] = array();
-
-        // TODO: Determine which plugins are installed and register their plugin interfaces
+        $this['shop4.backend.auth'] = new \Jtl\Shop4\Backend\Services\BackendAuthService($this['orm.em']);
     }
 }
