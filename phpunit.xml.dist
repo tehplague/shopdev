@@ -17,6 +17,7 @@
     </testsuites>
     <filter>
         <blacklist>
+            <directory>./tests</directory>
             <directory>./vendor</directory>
         </blacklist>
     </filter>
