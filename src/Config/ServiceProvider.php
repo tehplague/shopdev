@@ -38,7 +38,7 @@ class ServiceProvider implements ServiceProviderInterface
         $processor = new Processor();
         $definition = new SystemConfiguration();
 
-        $app['shop4.config'] = $processor->processConfiguration(
+        $app['config'] = $processor->processConfiguration(
             $definition,
             array($parsedYaml)
         );

@@ -39,7 +39,7 @@ class BackendAuthServiceTest extends DatabaseTestCase
         $username = 'cspoo';
         $password = '12345';
 
-        $user = $app['shop4.backend.auth']->checkLogin($username, $password);
+        $user = $app['backend.auth']->checkLogin($username, $password);
         $this->assertNotNull($user);
         $this->assertInstanceOf('\Jtl\Shop4\Entity\Auth\User', $user);
     }

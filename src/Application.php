@@ -42,6 +42,6 @@ class Application extends SilexApplication
 
     private function registerBackendServices()
     {
-        $this['shop4.backend.auth'] = new \Jtl\Shop4\Backend\Services\BackendAuthService($this['orm.em']);
+        $this['backend.auth'] = new \Jtl\Shop4\Backend\Services\BackendAuthService($this['orm.em']);
     }
 }
