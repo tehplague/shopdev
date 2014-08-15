@@ -6,6 +6,9 @@ use Jtl\Shop4\Tests\Common\DatabaseTestCase;
 
 use Jtl\Shop4\Backend\Services\BackendAuthService;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 class BackendAuthServiceTest extends DatabaseTestCase
 {
     protected function getFixtures()

@@ -4,6 +4,9 @@ namespace Jtl\Shop4\Backend\Services;
 
 use Doctrine\ORM\EntityManager;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 class BackendAuthService
 {
     private $em;

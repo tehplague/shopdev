@@ -4,6 +4,9 @@ namespace Jtl\Shop4;
 
 use Silex\Application as SilexApplication;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 class Application extends SilexApplication
 {
     /**

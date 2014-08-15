@@ -10,6 +10,9 @@ use Symfony\Component\Config\Definition\Processor;
 
 use Jtl\Shop4\Config\Definition\SystemConfiguration;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 class ServiceProvider implements ServiceProviderInterface
 {
     /**

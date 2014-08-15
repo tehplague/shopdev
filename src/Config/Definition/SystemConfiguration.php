@@ -5,6 +5,9 @@ namespace Jtl\Shop4\Config\Definition;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 class SystemConfiguration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()

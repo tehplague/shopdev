@@ -7,6 +7,9 @@ use Doctrine\Common\DataFixtures\FixtureInterface;
 
 use Jtl\Shop4\Entity\Auth\User;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 class AuthSimpleUserFixture implements FixtureInterface
 {
     public function load(ObjectManager $manager)

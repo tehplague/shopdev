@@ -4,6 +4,9 @@ namespace Jtl\Shop4\Tests\Application;
 
 use Jtl\Shop4\Tests\Common\ApplicationTestCase;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 class ContainerTest extends ApplicationTestCase
 {
     public function testInstantiation()

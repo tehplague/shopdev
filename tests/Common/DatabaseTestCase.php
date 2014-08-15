@@ -7,6 +7,9 @@ use Doctrine\Common\DataFixtures\Loader;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
 use MyDataFixtures\LoadUserData;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 abstract class DatabaseTestCase extends ApplicationTestCase
 {
     private $loader;

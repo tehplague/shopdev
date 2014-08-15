@@ -6,6 +6,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ *
  * @ORM\Entity
  * @ORM\Table(name="shop4_user")
  */

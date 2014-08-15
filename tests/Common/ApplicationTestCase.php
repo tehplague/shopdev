@@ -4,6 +4,9 @@ namespace Jtl\Shop4\Tests\Common;
 
 use Silex\WebTestCase;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 abstract class ApplicationTestCase extends WebTestCase
 {
     /**

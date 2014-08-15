@@ -8,6 +8,9 @@ use Symfony\Component\Config\Definition\Processor;
 use Jtl\Shop4\Config\Definition\SystemConfiguration;
 use Jtl\Shop4\Tests\Common\TestCase;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 class DefinitionTest extends TestCase
 {
     public function testConfigDefinition()

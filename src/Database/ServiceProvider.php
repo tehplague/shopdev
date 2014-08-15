@@ -8,6 +8,9 @@ use Silex\ServiceProviderInterface;
 
 use Dflydev\Silex\Provider\DoctrineOrm\DoctrineOrmServiceProvider;
 
+/**
+ * @author Christian Spoo <christian.spoo@jtl-software.com>
+ */
 class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
