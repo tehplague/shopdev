@@ -3,14 +3,18 @@
     "type" : "app",
     "license" : "proprietary",
     "require" : {
-        "silex/silex" : "~1.2",
-        "predis/service-provider" : "~0.4",
-        "ircmaxell/password-compat" : "~1.0",
         "php" : ">=5.4.0",
-        "symfony/config" : "~2.5",
-        "symfony/yaml" : "~2.5",
         "doctrine/data-fixtures" : "~1.0",
-        "dflydev/doctrine-orm-service-provider" : "1.0.*-dev"
+        "dflydev/doctrine-orm-service-provider" : "1.0.*-dev",
+        "ircmaxell/password-compat" : "~1.0",
+        "predis/service-provider" : "~0.4",
+        "silex/silex" : "~1.2",
+        "symfony/config" : "~2.5",
+        "symfony/form" : "~2.5",
+        "symfony/twig-bridge" : "~2.5",
+        "symfony/validator" : "~2.5",
+        "symfony/yaml" : "~2.5",
+        "twig/twig" : "1.*"
     },
     "require-dev" : {
         "phpunit/phpunit" : "~4.1",

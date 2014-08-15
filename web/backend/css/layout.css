@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@media screen,projection,print {
+    body {
+        padding-top: 40px;
+    }
+
+    nav a.logo {
+        display: block;
+        font-size: 0px;
+        padding: 5px;
+    }
+}

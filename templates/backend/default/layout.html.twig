@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>JTL-Shop4 - Backend</title>
+
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/backend/css/layout.css">
+
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="bootflat/js/html5shiv.js"></script>
+            <script type="text/javascript" src="bootflat/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="javascript:void(0)">JTL-Shop 4</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="javascript:void(0)">Dashboard</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                Gestaltung <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="javascript:void(0)">Template</a></li>
+                                <li><a href="javascript:void(0)">Seitenlayout</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                CMS <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="javascript:void(0)">Inhalt</a></li>
+                                <li><a href="javascript:void(0)">Seitenstruktur</a></li>
+                                <li><a href="javascript:void(0)">Module</a></li>
+                                <li class="divider"></li>
+                                <li><a href="javascript:void(0)">Newsletter</a></li>
+                                <li class="divider"></li>
+                                <li><a href="javascript:void(0)">Umfragen</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                Verkaufsförderung <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="javascript:void(0)">Geschenkbeilagen</a></li>
+                                <li><a href="javascript:void(0)">Kunden werben Kunden</a></li>
+                                <li><a href="javascript:void(0)">Wunschzettel</a></li>
+
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Shop-Marketing</li>
+                                <li><a href="javascript:void(0)">Trusted Shops</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                Kaufabwicklung <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-header">Zahlungsarten</li>
+                                <li><a href="javascript:void(0)">Billpay</a></li>
+                                <li><a href="javascript:void(0)">ClickandBuy</a></li>
+                                <li><a href="javascript:void(0)">Moneybookers</a></li>
+
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Rechtliches</li>
+                                <li><a href="javascript:void(0)">AGB</a></li>
+                                <li><a href="javascript:void(0)">Widerrufsbelehrungen</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                System <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="fa fa-users"></i>
+                                        Benutzerverwaltung
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="fa fa-gears"></i>
+                                        Einstellungen
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="fa fa-database"></i>
+                                        Cache
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="fa fa-tasks"></i>
+                                        Diagnose / Wartung
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="fa fa-file-text-o"></i>
+                                        Protokolle
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="fa fa-cubes"></i>
+                                        Erweiterungen
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="fa fa-cloud-download"></i>
+                                        Updates
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="pull-right">
+                        <a class="logo" href="http://www.jtl-software.de/" title="JTL-Software-GmbH">
+                            <img height="40" src="/backend/images/logo-jtlsoftware.png" alt="JTL-Software GmbH">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1>Hello, world!</h1>
+        </div>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </body>
+</html>

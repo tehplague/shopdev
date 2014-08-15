@@ -20,6 +20,10 @@ class Application extends SilexApplication
         // Enable Silex debugging for the purpose of development
         $this['debug'] = true;
 
+        // Register ServiceControllerServiceProvider to provide colon notation
+        // for controllers
+        $this->register(new \Silex\Provider\ServiceControllerServiceProvider());
+
         // Initialize Shop4 configuration services
         $this->registerConfigServices();
 
@@ -42,6 +46,8 @@ class Application extends SilexApplication
 
     private function registerBackendServices()
     {
+        $this->register(new \Jtl\Shop4\Backend\TwigServiceProvider());
         $this['backend.auth'] = new \Jtl\Shop4\Backend\Services\BackendAuthService($this['orm.em']);
+        $this->mount('/admin', new \Jtl\Shop4\Backend\BackendControllerProvider());
     }
 }
