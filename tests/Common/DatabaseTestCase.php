@@ -30,7 +30,7 @@ abstract class DatabaseTestCase extends ApplicationTestCase
 
         $purger = new ORMPurger();
         $purger->setPurgeMode(ORMPurger::PURGE_MODE_TRUNCATE);
-        $this->executor = new ORMExecutor($app['orm.em'], $purger);
+        $this->executor = new ORMExecutor($app['doctrine_orm.em'], $purger);
 
         return $app;
     }

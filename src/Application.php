@@ -47,7 +47,7 @@ class Application extends SilexApplication
     private function registerBackendServices()
     {
         $this->register(new \Jtl\Shop4\Backend\TwigServiceProvider());
-        $this['backend.auth'] = new \Jtl\Shop4\Backend\Services\BackendAuthService($this['orm.em']);
+        $this['backend.auth'] = new \Jtl\Shop4\Backend\Services\BackendAuthService($this['doctrine_orm.em']);
         $this->mount('/admin', new \Jtl\Shop4\Backend\BackendControllerProvider());
     }
 }

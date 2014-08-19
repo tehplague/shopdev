@@ -6,7 +6,7 @@ use Doctrine\ORM\Tools\Console\ConsoleRunner;
 $app = require_once(__DIR__ . '/../app/bootstrap.php');
 
 // replace with mechanism to retrieve EntityManager in your app
-$entityManager = $app['orm.em'];
+$entityManager = $app['doctrine_orm.em'];
 
 // map MySQL enum to PHP string
 $platform = $entityManager->getConnection()->getDatabasePlatform();

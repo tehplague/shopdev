@@ -5,7 +5,9 @@
     "require" : {
         "php" : ">=5.4.0",
         "doctrine/data-fixtures" : "~1.0",
-        "dflydev/doctrine-orm-service-provider" : "1.0.*-dev",
+        "doctrine/dbal" : "~2.4",
+        "doctrine/orm" : "~2.4",
+        "gedmo/doctrine-extensions" : "~2.3",
         "ircmaxell/password-compat" : "~1.0",
         "predis/service-provider" : "~0.4",
         "silex/silex" : "~1.2",
