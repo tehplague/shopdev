@@ -4,6 +4,7 @@ namespace Jtl\Shop4\Database;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;
+use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\Configuration;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\Driver\DriverChain;
@@ -51,6 +52,17 @@ class DoctrineOrmServiceProvider implements ServiceProviderInterface
             }
             else {
                 $config->setAutogenerateProxyClasses(false);
+            }
+
+            // Register types
+            if (is_array($app['doctrine_orm.types'])) {
+                foreach ($app['doctrine_orm.types'] as $typeName => $typeClass) {
+                    if (Type::hasType($typeName)) {
+                        Type::overrideType($typeName, $typeClass);
+                    } else {
+                        Type::addType($typeName, $typeClass);
+                    }
+                }
             }
 
             return $config;

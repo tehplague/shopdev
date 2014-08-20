@@ -28,6 +28,9 @@ class ServiceProvider implements ServiceProviderInterface
                 'dbname' => $app['config']['database']['database'],
                 'password' => $app['config']['database']['password'],
                 'charset' => $app['config']['database']['charset']
+            ),
+            'doctrine_orm.types' => array(
+                'datetime' => '\Jtl\Shop4\Database\DBAL\Types\UTCDateTimeType'
             )
         ));
     }
