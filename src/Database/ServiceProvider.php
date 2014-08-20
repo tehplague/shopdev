@@ -13,8 +13,6 @@ class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
     {
-        $doctrineTypes = $this->generateDoctrineTypes($app);
-
         // Load DB config from configuration service and initialize Doctrine
         $app->register(new DoctrineOrmServiceProvider(), array(
             'doctrine_orm.entities_path' => APP_ROOT . '/src/Entity',
@@ -33,14 +31,6 @@ class ServiceProvider implements ServiceProviderInterface
                 'datetime' => '\Jtl\Shop4\Database\DBAL\Types\UTCDateTimeType'
             )
         ));
-    }
-
-    private function generateDoctrineTypes(Application $app)
-    {
-        return array(
-            // 'datetime' => '\Jtl\ConnectorLicense\DBAL\Types\UTCDateTimeType',
-            // 'license_type' => '\Jtl\ConnectorLicense\DBAL\Types\LicenseTypeType'
-        );
     }
 
     public function boot(Application $app)
